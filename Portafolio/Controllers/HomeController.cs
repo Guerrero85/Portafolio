@@ -40,7 +40,7 @@ namespace Portafolio.Controllers
         [HttpPost]
         public async Task<IActionResult> Contacto(ContactoViewModel contactoViewModel)
         {
-            await servicioEmail.Enviar(ContactoViewModel);
+            await servicioEmail.Enviar(contactoViewModel);
             return RedirectToAction("Gracias");
         }
 
